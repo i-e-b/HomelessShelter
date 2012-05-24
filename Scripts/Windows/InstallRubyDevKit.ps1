@@ -15,3 +15,13 @@ if (${env:path} -match ";(.*?Ruby.*?\\bin)") {
 	throw "Ruby not found"
 }
 
+
+$dk_dir = "$ruby_path\devkit"
+download -url "$ruby_devkit_url" -file "$script_dir\devkit.7zip"
+md "$dk_dir"
+& "$script_dir\7-zip\7z.exe x '$script_dir\devkit.7zip' '-o$dk_dir' "
+
+pushd "$dk_dir"
+	ruby dk.rb init
+	ruby dk.rb install
+popd

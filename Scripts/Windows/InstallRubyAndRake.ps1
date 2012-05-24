@@ -19,7 +19,7 @@ try {
 		if (-not (isItThere("ruby")))  {
 			echo "Downloading Ruby"
 			$file = ".\ruby_installer.exe"
-			download($ruby_base_url, $file)
+			download -url $ruby_base_url -file $file
 			echo "Running installer"
 			$install = $file + " /silent"
 			cmd /c $install
