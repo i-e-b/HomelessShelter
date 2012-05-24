@@ -1,0 +1,9 @@
+http://vagrantup.com/docs/getting-started/provisioning.html
+http://vagrantup.com/docs/provisioners/chef_solo.html
+http://mozilla.github.com/zamboni/topics/install-zamboni/install-with-vagrant.html
+https://github.com/mozilla/zamboni/blob/master/Vagrantfile
+http://blog.tonyto.es/cooking-mono-with-vagrant-and-chef
+
+
+
+...# config.vm.box_url = "http://files.vagrantup.com/lucid32.box"....
