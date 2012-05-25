@@ -36,7 +36,9 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./Chef"
 	
-    #chef.add_recipe "java"
     chef.add_recipe "mono"
+    chef.add_recipe "java"
+    chef.add_recipe "rabbitmq"
+    chef.add_recipe "nginx"
   end
 end

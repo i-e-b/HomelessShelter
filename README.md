@@ -14,7 +14,7 @@ Software that gets installed:
 (i) Ruby DevKit
 (i) GEMS: Vagrant, Bundler
 
-(v) Mono, (java, nginx --> ready but not hooked in)
+(v) Mono, java, nginx, rabbitmq
 
 
 TODO
