@@ -21,3 +21,5 @@ TODO
 ====
 Vagrant image doesn't get enough RAM. First 'vagrant up' fails, need to up RAM in VBox manager gui.
 Should be able to adjust this somewhere but don't know how!
+
+Mono recipe isn't working properly.
