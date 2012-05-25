@@ -3,7 +3,9 @@ http://vagrantup.com/docs/provisioners/chef_solo.html
 http://mozilla.github.com/zamboni/topics/install-zamboni/install-with-vagrant.html
 https://github.com/mozilla/zamboni/blob/master/Vagrantfile
 http://blog.tonyto.es/cooking-mono-with-vagrant-and-chef
+http://till.klampaeckel.de/blog/archives/142-Getting-the-most-out-of-Chef-with-Scalarium-and-vagrant.html
 
 
 
 ...# config.vm.box_url = "http://files.vagrantup.com/lucid32.box"....
+... http://files.vagrantup.com/precise32.box
