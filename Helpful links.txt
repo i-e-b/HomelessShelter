@@ -6,6 +6,8 @@ http://blog.tonyto.es/cooking-mono-with-vagrant-and-chef
 http://till.klampaeckel.de/blog/archives/142-Getting-the-most-out-of-Chef-with-Scalarium-and-vagrant.html
 
 
+https://github.com/till/easybib-cookbooks
+https://github.com/opscode-cookbooks
 
 ...# config.vm.box_url = "http://files.vagrantup.com/lucid32.box"....
 ... http://files.vagrantup.com/precise32.box
