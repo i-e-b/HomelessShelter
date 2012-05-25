@@ -1,3 +1,4 @@
+@echo off
 cd %~dp0
 
 powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\InstallRuby.ps1"
