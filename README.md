@@ -14,4 +14,10 @@ Software that gets installed:
 (i) Ruby DevKit
 (i) GEMS: Vagrant, Bundler
 
-(v) Mono...
+(v) Mono, (java, nginx --> ready but not hooked in)
+
+
+TODO
+====
+Vagrant image doesn't get enough RAM. First 'vagrant up' fails, need to up RAM in VBox manager gui.
+Should be able to adjust this somewhere but don't know how!
