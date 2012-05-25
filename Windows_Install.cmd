@@ -7,5 +7,4 @@ powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\InstallGems
 powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\InstallVirtualBox.ps1"
 powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\AddPathToVirtualBox.ps1"
 powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\PrepareVagrant.ps1"
-
-git clone https://github.com/opscode-cookbooks/java.git Chef/java
+powershell.exe -NoProfile -ExecutionPolicy ByPass ".\Scripts\Windows\CloneCookbooks.ps1"
