@@ -22,7 +22,7 @@ Vagrant::Config.run do |config|
   # Assign this VM to a bridged network, allowing you to connect directly to a
   # network using the host's network device. This makes the VM appear as another
   # physical device on your network.
-### config.vm.network :bridged
+  config.vm.network :bridged
 
   # Forward a port from the guest to the host, which allows for outside
   # computers to access the VM, whereas host only networking does not.
@@ -33,12 +33,16 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
 ### config.vm.share_folder "v-data", "/vagrant_data", "../data"
 
+  config.vm.host_name = ENV['VAGRANT_HOSTNAME'] || "contentweb01"
+  config.vm.customize ["modifyvm", :id, "--memory", 1024] 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "./Chef"
 	
     chef.add_recipe "mono"
     chef.add_recipe "java"
-    chef.add_recipe "rabbitmq"
+ #  chef.add_recipe "rabbitmq"
     chef.add_recipe "nginx"
+    chef.add_recipe "openssh"
+    chef.add_recipe "git"
   end
 end
