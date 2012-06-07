@@ -36,7 +36,7 @@ Vagrant::Config.run do |config|
   config.vm.host_name = ENV['VAGRANT_HOSTNAME'] || "contentweb01"
   config.vm.customize ["modifyvm", :id, "--memory", 1024] 
   config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = "./Chef"
+    chef.cookbooks_path = ["./Chef", "./Chef/jester-recipes"]
 	
     chef.add_recipe "mono"
     chef.add_recipe "java"
@@ -44,5 +44,6 @@ Vagrant::Config.run do |config|
     chef.add_recipe "nginx"
     chef.add_recipe "openssh"
     chef.add_recipe "git"
+#   chef.add_recipe "delivery-web-deployment"
   end
 end

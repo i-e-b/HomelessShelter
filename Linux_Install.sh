@@ -52,6 +52,10 @@ if [ ! -d "openssh" ]; then
 	git clone https://github.com/opscode-cookbooks/openssh.git
 fi
 
+if [ ! -d "jester-recipes" ]; then
+	git clone git@gitorious.7digital.local:sevendigital-jester/jester-recipes.git
+fi
+
 cd ..
 
 echo "Done!"
