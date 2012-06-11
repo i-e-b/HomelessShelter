@@ -6,20 +6,23 @@ Windows install scripts are long and complex-- some NuGet magic might help?
 
 Network Setup
 -------------
-The vagrantfile supplied uses NAT, Bridged and Host-Only mode.
-To communicate from your host box, try ``ssh 192.168.10.100 -p 22 -l vagrant``
+The vagrantfile supplied uses Bridged networking
+If you have problems with Bridged mode and DHCP ip addresses, it may be that the gateway is not correctly set.
+To fix this:
+``sudo route add -host [your gateway] eth1
+sudo route add -net 0.0.0.0 netmask 0.0.0.0 gw [your gateway] dev eth1``
 
 Work arounds for Vagrant box bugs:
 -----------------------------------
-If your box won't start, find the *.vbox file (usually c:\Users\...\VirtualBox VMs\... under windows)
+If your box won't start, find the .vbox file (usually c:\Users\...\VirtualBox VMs\... under windows)
 Change: 
-    <CPU count="2" hotplug="false"> 
+    &lt;CPU count="2" hotplug="false"&gt; 
 to: 
-    <CPU count="1" hotplug="false"> 
+    &lt;CPU count="1" hotplug="false"&gt; 
 And change: 
-    <HardwareVirtEx enabled="true" exclusive="false"/> 
+    &lt;HardwareVirtEx enabled="true" exclusive="false"/&gt; 
 to: 
-    <HardwareVirtEx enabled="false" exclusive="false"/> 
+    &lt;HardwareVirtEx enabled="false" exclusive="false"/&gt; 
 
 Generally, Guest-in-Guest isn't working well
 
@@ -27,18 +30,18 @@ Generally, Guest-in-Guest isn't working well
 Software that gets installed:
 -----------------------------
 On host, by install scripts:
-*VirtualBox
-*Ruby
-*Ruby DevKit
-*Vagrant gem
-*Bundler gem
+* VirtualBox
+* Ruby
+* Ruby DevKit
+* Vagrant gem
+* Bundler gem
 
 On Vagrant boxes, by Chef:
-*Mono
-*java
-*nginx
-*rabbitmq
-*ohai
-*git
-*open-ssh
+* Mono
+* java (currently disabled)
+* nginx
+* rabbitmq (currently disabled)
+* ohai
+* git
+* open-ssh
 
