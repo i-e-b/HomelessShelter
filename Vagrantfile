@@ -39,7 +39,7 @@ Vagrant::Config.run do |config|
     chef.cookbooks_path = ["./Chef", "./Chef/jester-recipes"]
 	
     chef.add_recipe "mono"
-    chef.add_recipe "java"
+ #  chef.add_recipe "java"
  #  chef.add_recipe "rabbitmq"
     chef.add_recipe "nginx"
     chef.add_recipe "openssh"
