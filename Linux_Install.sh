@@ -56,6 +56,10 @@ if [ ! -d "jester-recipes" ]; then
 	git clone git@gitorious.7digital.local:sevendigital-jester/jester-recipes.git
 fi
 
+if [ ! -d "supervisor-recipe" ]; then
+	git clone https://github.com/i-e-b/supervisor-recipe.git
+fi
+
 cd ..
 
 echo "Done!"
