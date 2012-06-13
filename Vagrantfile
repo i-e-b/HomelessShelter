@@ -43,6 +43,7 @@ Vagrant::Config.run do |config|
  #  chef.add_recipe "rabbitmq"
     chef.add_recipe "nginx"
     chef.add_recipe "openssh"
+    chef.add_recipe "supervisor-recipe"
     chef.add_recipe "git"
     chef.add_recipe "delivery-web-deploy"
   end
