@@ -61,6 +61,11 @@ if [ ! -d "supervisor-recipe" ]; then
 	git clone https://github.com/i-e-b/supervisor-recipe.git
 fi
 
+if [ ! -d "7digital-recipes" ]; then
+	git clone https://github.com/7digital/chef-recipes.git 7digital-recipes
+fi
+
+
 cd ..
 
 echo "Done!"
