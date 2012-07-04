@@ -33,7 +33,7 @@ Vagrant::Config.run do |config|
   # folder, and the third is the path on the host to the actual folder.
 ### config.vm.share_folder "v-data", "/vagrant_data", "../data"
 
-  config.vm.host_name = ENV['VAGRANT_HOSTNAME'] || "contentweb01"
+  config.vm.host_name = ENV['VAGRANT_HOSTNAME'] || "contentweb01-uat"
   config.vm.customize ["modifyvm", :id, "--memory", 1024] 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["../../Chef", "../../Chef/jester-recipes", "../../Chef/7digital-recipes"]
