@@ -37,6 +37,7 @@ Vagrant::Config.run do |config|
   config.vm.customize ["modifyvm", :id, "--memory", 1024] 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["../../Chef"]
+    chef.add_recipe "unzip"
     chef.add_recipe "java"
     chef.add_recipe "teamcity-build-agent"
     chef.add_recipe "openssh"
