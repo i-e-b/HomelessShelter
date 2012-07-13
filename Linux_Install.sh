@@ -16,7 +16,14 @@ echo "Checking for Virtualbox..."
 sudo apt-get install virtualbox -y
 
 echo "Adding vagrant box..."
-vagrant box add 'precise' "http://files.vagrantup.com/precise32.box"
+# https://s3-eu-west-1.amazonaws.com/rosstimson-vagrant-boxes/debian-squeeze-64-rvm.box
+# http://dl.dropbox.com/u/937870/VMs/squeeze64.box
+# http://puppetlabs.s3.amazonaws.com/pub/squeeze64.box
+# http://dl.dropbox.com/u/174733/debian-squeeze-64.box
+# http://files.vagrantup.com/precise32.box
+
+BOX="http://dl.dropbox.com/u/937870/VMs/squeeze64.box"
+vagrant box add 'basebox' "$BOX"
 
 echo "Cloning chef recipies..."
 if [ ! -d "Chef" ]; then 
