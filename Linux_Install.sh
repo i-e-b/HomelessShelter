@@ -41,7 +41,7 @@ if [ ! -d "rabbitmq" ]; then
 fi
 
 if [ ! -d "nginx" ]; then 
-	git clone https://github.com/opscode-cookbooks/nginx.git
+	git clone https://github.com/i-e-b/nginx.git
 fi
 
 if [ ! -d "mono" ]; then 
