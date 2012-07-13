@@ -21,8 +21,9 @@ echo "Adding vagrant box..."
 # http://puppetlabs.s3.amazonaws.com/pub/squeeze64.box
 # http://dl.dropbox.com/u/174733/debian-squeeze-64.box
 # http://files.vagrantup.com/precise32.box
+# http://mathie-vagrant-boxes.s3.amazonaws.com/debian_squeeze_32.box 
 
-BOX="http://dl.dropbox.com/u/937870/VMs/squeeze64.box"
+BOX="http://mathie-vagrant-boxes.s3.amazonaws.com/debian_squeeze_32.box"
 vagrant box add 'basebox' "$BOX"
 
 echo "Cloning chef recipies..."
